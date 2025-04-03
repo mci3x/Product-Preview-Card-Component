@@ -1,0 +1,277 @@
+/********************************/
+/* Cheatsheet :D */
+/********************************/
+
+/*  
+    4px = 0.25rem
+    12px = 0.75rem
+    13px = 0.8125rem
+    14px = 0.875rem
+    16px = 1rem
+    17.5px = 1.094rem
+    20px = 1.25rem
+    24px = 1.5rem
+    28px = 1.75rem
+    32px = 2rem
+    36px = 2.25rem
+    40px = 2.5rem
+    45px = 2.813rem
+    50px = 3.125rem
+    279px = 17.438rem
+    289px = 18.063rem
+    300px = 18.75rem
+    304px = 19rem
+    342px = 21.375rem
+    350px = 21.875rem
+    327px = 20.438rem
+    384px = 24rem
+    408px = 25.5rem
+    456px = 28.5rem
+    501px = 31.313rem
+    522px = 32.625rem
+    579px = 36.188rem
+    600px = 37.5rem
+    611px = 38.188rem
+    704px = 44rem
+    736px = 46rem
+    768px = 48rem 
+    1400px = 87.5rem
+    1440px = 90rem
+    1920px = 120rem
+*/
+
+/********************************/
+/* Custom properties */
+/********************************/
+
+:root {
+  /* Colors */
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Spacing */
+  --s-4: 0.25rem; /* 50 */
+  --s-8: 0.5rem; /* 100 */
+  --s-16: 1rem; /* 200 */
+  --s-24: 1.5rem; /* 300 */
+  --s-32: 2rem; /* 400 */
+  --s-40: 2.5rem; /* 500 */
+
+  /* Fonts */
+  --w-1: 500;
+  --w-2: 700;
+}
+
+/********************************/
+/* General */
+/********************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 93.33%;
+  /* max-width: 21.875rem; */
+  max-width: 28rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+/* .card_image {
+  height: 21.375rem;
+  } */
+
+picture {
+  block-size: 21.375rem;
+  /* object-position: left; */
+  /* object-fit: cover; */
+  /* width: 350px; */
+}
+
+img.product {
+  border-radius: 8px 8px 0 0;
+  /* block-size: auto; */
+  object-fit: cover;
+  object-position: 10% 90% 10%;
+  aspect-ratio: auto;
+  /* width: 350px; */
+  height: 21.375rem;
+  max-inline-size: 100%;
+}
+
+/********************************/
+/* Utilities */
+/********************************/
+
+/* Text Presets */
+/********************************/
+
+.txt-p--1 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 2rem;
+  font-weight: var(--w-2);
+  line-height: 1;
+}
+
+.txt-p--2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: var(--w-2);
+  line-height: 1.1;
+}
+
+.txt-p--3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: var(--w-1);
+  line-height: 1.6;
+  color: var(--grey);
+}
+
+.txt-p--4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: var(--w-1);
+  line-height: 1.2;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+.txt-p--5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8125rem;
+  font-weight: var(--w-1);
+  line-height: 1.2;
+  color: var(--grey);
+}
+
+/* Colors */
+/********************************/
+
+.black {
+  color: var(--black);
+}
+
+.green--500 {
+  color: var(--green-500);
+}
+
+/* Spacing */
+/********************************/
+
+.mg-b--32 {
+  margin-bottom: var(--s-32);
+}
+.mg-b--24 {
+  margin-bottom: var(--s-24);
+}
+
+.pd--32 {
+  padding: var(--s-32);
+}
+.pd--24 {
+  padding: var(--s-24);
+}
+.pd--16 {
+  padding: var(--s-16);
+}
+
+/********************************/
+/* TESTS */
+/********************************/
+
+.card {
+  background-color: var(--white);
+  /* width: 50%; */
+  min-height: 25.5rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+span {
+  text-decoration: line-through;
+}
+
+button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3.125rem;
+  gap: var(--s-8);
+  color: white;
+  background-color: var(--green-500);
+  border-radius: 8px;
+  transition: all 500ms;
+}
+
+button:hover {
+  background-color: var(--green-700);
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* ------------------------------- TESTING ------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------- */
+
+@media (min-width: 44rem) {
+  .container {
+    /* width: 90%; */
+    max-width: 37.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  img.product,
+  .card {
+    height: 28.5rem;
+  }
+
+  img.product {
+    border-radius: 8px 0 0 8px;
+  }
+
+  .card {
+    border-radius: 0 8px 8px 0;
+  }
+
+  .card_image {
+    /* height: 342px; */
+  }
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* ------------------------------- TO DO   ------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------- */
+
+/* Deleted price, info for aria */
+
+/* Change in margin bottom size */
+
+/* Getting rid of height? */
+
+/* Code optimizing */
+
+/* What is that?: data-sr-id="7" */
