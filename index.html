@@ -31,7 +31,6 @@
 
   <body>
     <main class="container">
-      <!-- <article class="card__image"> -->
       <picture>
         <source
           srcset="./images/image-product-desktop.jpg"
@@ -47,19 +46,22 @@
           height="480"
         />
       </picture>
-      <!-- </article> -->
 
       <article class="card | pd--32">
-        <h1 class="txt-p--4 | mg-b--24">Perfume</h1>
-        <h2 class="[ txt-p--1 | black ] mg-b--24">
-          Gabrielle Essence Eau De Parfum
-        </h2>
-        <p class="txt-p--3 | mg-b--24">
+        <div></div>
+        <!-- Dummy div for a margin-bottom rules to work -->
+        <h1 class="txt-p--4">Perfume</h1>
+        <h2 class="txt-p--1 | black">Gabrielle Essence Eau De Parfum</h2>
+        <p class="txt-p--3">
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-        <p class="[ price ] [ txt-p--1 | green--500 ] [ mg-b--24 ]">
-          $149.99 <span class="txt-p--5">$169.99</span>
+        <p class="[ price ] [ txt-p--1 | green--500 ]">
+          $149.99
+          <del class="txt-p--5">
+            <span class="sr-only">The last price of the perfume was: </span>
+            $169.99
+          </del>
         </p>
         <button class="txt-p--2">
           <img src="./images/icon-cart.svg" alt="" aria-hidden="true" />

@@ -87,20 +87,12 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   width: 93.33%;
-  /* max-width: 21.875rem; */
   max-width: 28rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 }
 
-/* .card_image {
-  height: 21.375rem;
-  } */
-
 picture {
   block-size: 21.375rem;
-  /* object-position: left; */
-  /* object-fit: cover; */
-  /* width: 350px; */
 }
 
 img.product {
@@ -109,7 +101,6 @@ img.product {
   object-fit: cover;
   object-position: 10% 90% 10%;
   aspect-ratio: auto;
-  /* width: 350px; */
   height: 21.375rem;
   max-inline-size: 100%;
 }
@@ -175,12 +166,13 @@ img.product {
 /* Spacing */
 /********************************/
 
-.mg-b--32 {
+/* .mg-b--32 {
   margin-bottom: var(--s-32);
-}
-.mg-b--24 {
+} */
+
+/* .mg-b--24 {
   margin-bottom: var(--s-24);
-}
+} */
 
 .pd--32 {
   padding: var(--s-32);
@@ -192,15 +184,30 @@ img.product {
   padding: var(--s-16);
 }
 
+/* Screen reader only */
+/********************************/
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
 /********************************/
 /* TESTS */
 /********************************/
 
 .card {
   background-color: var(--white);
-  /* width: 50%; */
   min-height: 25.5rem;
   border-radius: 0 0 8px 8px;
+}
+
+.card * + *:not(button) {
+  margin-bottom: var(--s-24);
 }
 
 .price {
@@ -209,10 +216,6 @@ img.product {
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-}
-
-span {
-  text-decoration: line-through;
 }
 
 button {
@@ -239,7 +242,6 @@ button:hover {
 
 @media (min-width: 44rem) {
   .container {
-    /* width: 90%; */
     max-width: 37.5rem;
     grid-template-columns: 1fr 1fr;
   }
@@ -257,18 +259,14 @@ button:hover {
     border-radius: 0 8px 8px 0;
   }
 
-  .card_image {
-    /* height: 342px; */
+  .card > p {
+    margin-bottom: var(--s-32);
   }
 }
 
 /* ----------------------------------------------------------------------------------------- */
 /* ------------------------------- TO DO   ------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------- */
-
-/* Deleted price, info for aria */
-
-/* Change in margin bottom size */
 
 /* Getting rid of height? */
 
