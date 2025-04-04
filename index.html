@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name=""description" content="Frontend Mentor Challenge | Product
-    preview card component" />
+    <meta
+      name="description"
+      content="Frontend Mentor Challenge | Product
+    preview card component"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,13 +36,19 @@
     <main class="container">
       <picture>
         <source
-          srcset="./images/image-product-desktop.jpg"
+          srcset="
+            ./images/image-product-desktop-304x456.webp  304w,
+            ./images/image-product-desktop.webp          600w,
+            ./images/image-product-desktop-608x912.webp  608w,
+            ./images/image-product-desktop-912x1368.webp 912w
+          "
+          sizes="(min-width: 720px) 304px, 489px"
           media="(min-width: 44em)"
           width="300"
           height="456"
         />
         <img
-          src="./images/image-product-mobile.jpg"
+          src="./images/image-product-mobile.webp"
           alt="Photo of a perfume bottle"
           class="product"
           width="686"
@@ -56,14 +65,14 @@
           A floral, solar and voluptuous interpretation composed by Olivier
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
-        <p class="[ price ] [ txt-p--1 | green--500 ]">
+        <p class="[ price ] [ txt-p--1 | green--500 ] [ flex ]">
           $149.99
-          <del class="txt-p--5">
+          <del class="txt-p--5 | grey">
             <span class="sr-only">The last price of the perfume was: </span>
             $169.99
           </del>
         </p>
-        <button class="txt-p--2">
+        <button class="txt-p--2 | flex">
           <img src="./images/icon-cart.svg" alt="" aria-hidden="true" />
           Add to Cart
         </button>
